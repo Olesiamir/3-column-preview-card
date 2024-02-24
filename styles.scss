@@ -32,6 +32,12 @@ p {
   font-size: 13px;
 }
 
+@media screen and (max-width: $mobile) {
+  p {
+    font-size: 15px;
+  }
+}
+
 h1 {
   color: $Very-light-gray;
   font-family: "Big Shoulders Display", sans-serif;
@@ -48,35 +54,6 @@ main {
   justify-content: center;
   margin: auto;
 
-  section {
-    height: 470px;
-    display: flex;
-    flex-direction: column;
-    padding: 39px;
-    box-sizing: border-box;
-    .section-icon {
-      width: 60px;
-    }
-    .btn-container {
-      flex: 1;
-      display: flex;
-      align-items: flex-end;
-    }
-    &:last-of-type {
-      border-radius: 0 0 8px 8px;
-    }
-    button {
-      background-color: $Very-light-gray;
-      font-family: "Lexend Deca", sans-serif;
-      font-size: 1em;
-      border-radius: 25px;
-      border: none;
-      height: 45px;
-      width: fit-content;
-      padding: 14px 33px;
-      margin-top: 40px;
-    }
-  }
   section:nth-child(1) {
     background-color: $Bright-orange;
     border-radius: 8px 0 0 8px;
@@ -98,10 +75,61 @@ main {
     }
   }
 
+  section {
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    padding: 39px;
+    box-sizing: border-box;
+    .section-icon {
+      width: 60px;
+    }
+    .btn-container {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+    }
+    
+    button {
+      background-color: $Very-light-gray;
+      font-family: "Lexend Deca", sans-serif;
+      font-size: 1em;
+      border-radius: 25px;
+      border: none;
+      width: fit-content;
+      padding: 14px 33px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: transparent;
+        color: $Very-light-gray;
+        border: 2px solid $Very-light-gray;
+      }
+    }
+  }
+
   @media screen and (max-width: $mobile){
     flex-direction: column;
     width: calc(100% - 40px);
     padding: 80px 0;
+    height: auto;
+    section {
+      height: 440px;
+      padding: 44px;
+
+      &:last-of-type {
+        border-radius: 0 0 8px 8px;
+      }
+
+      button {
+        font-size: 1.1em;
+        padding: 15px 35px;
+      }
+
+      .section-icon {
+        width: 70px;
+      }
+    }
     section:nth-child(1) {
       border-radius: 8px 8px 0 0;
     }
