@@ -65,6 +65,7 @@ main section {
   flex-direction: column;
   padding: 39px;
   box-sizing: border-box;
+  max-width: 258px;
 }
 main section .section-icon {
   width: 60px;
@@ -99,6 +100,7 @@ main section button:hover {
   main section {
     height: 440px;
     padding: 44px;
+    max-width: none;
   }
   main section:last-of-type {
     border-radius: 0 0 8px 8px;
